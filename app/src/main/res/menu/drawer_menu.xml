@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:icon="@drawable/ic_home"
+        android:id="@+id/item_home"
+        android:checkable="true"
+        android:title="Home"/>
+    <item
+        android:icon="@drawable/ic_profile"
+        android:id="@+id/item_profile"
+        android:checkable="true"
+        android:title="Profile"/>
+    <item
+        android:icon="@drawable/ic_photo"
+        android:id="@+id/item_photos"
+        android:checkable="true"
+        android:title="Photos"/>
+    <item
+        android:icon="@drawable/ic_peoples"
+        android:id="@+id/item_contacts"
+        android:checkable="true"
+        android:title="Contacts"/>
+    <item
+        android:icon="@drawable/ic_find"
+        android:id="@+id/item_find_people"
+        android:checkable="true"
+        android:title="Find People"/>
+    <item
+        android:icon="@drawable/ic_contacts"
+        android:id="@+id/item_retired_off"
+        android:checkable="true"
+        android:title="Retired Officials"/>
+    <item
+        android:icon="@drawable/ic_logout"
+        android:id="@+id/item_logout"
+        android:checkable="true"
+        android:title="Log Out"/>
+
+
+</menu>
