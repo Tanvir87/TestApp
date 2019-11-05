@@ -8,6 +8,8 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.smartlocation.testapp.R;
+import com.smartlocation.testapp.Util.Navigator;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
@@ -19,23 +21,21 @@ public class HomeFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_home, container, false);
 
-        LinearLayout linearLayout = rootView.findViewById(R.id.linear_profile);
+        LinearLayout linearProfile = rootView.findViewById(R.id.linear_profile);
+        LinearLayout linearPhotos = rootView.findViewById(R.id.linear_photos);
 
-        linearLayout.setOnClickListener(new View.OnClickListener() {
+
+
+        linearProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Fragment newFragment = new ProfileFragment();
-                // consider using Java coding conventions (upper first char class names!!!)
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-
-                // Replace whatever is in the fragment_container view with this fragment,
-                // and add the transaction to the back stack
-                transaction.replace(R.id.mainFrame, newFragment);
-                transaction.addToBackStack(null);
-
-                // Commit the transaction
-                transaction.commit();
-                Toast.makeText(getContext(),"Profile", Toast.LENGTH_SHORT).show();
+                Navigator.fragmentForwardWithNoStack(getContext(), R.id.mainFrame, new ProfileFragment());
+            }
+        });
+        linearPhotos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigator.fragmentForwardWithNoStack(getContext(), R.id.mainFrame, new PhotoFragment());
             }
         });
         return rootView;
