@@ -41,5 +41,8 @@ dependencies {
     annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
     compileOnly 'javax.annotation:jsr250-api:1.0'
 
+    //Text drawable
+    implementation 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
+
 
 }

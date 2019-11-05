@@ -18,7 +18,8 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="#202F65"
+            android:gravity="center"
+            android:background="@color/colorPrimary"
             android:theme="@style/ThemeOverlay.AppCompat.Light"
             app:titleTextColor="#FFFFFF" />
 

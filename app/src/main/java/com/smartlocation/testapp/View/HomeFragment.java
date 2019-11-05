@@ -25,19 +25,23 @@ public class HomeFragment extends Fragment {
         LinearLayout linearPhotos = rootView.findViewById(R.id.linear_photos);
 
 
-
+        //profile
         linearProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //navigator call
                 Navigator.fragmentForwardWithNoStack(getContext(), R.id.mainFrame, new ProfileFragment());
             }
         });
+
+        //photo
         linearPhotos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Navigator.fragmentForwardWithNoStack(getContext(), R.id.mainFrame, new PhotoFragment());
             }
-        });
+});
+
         return rootView;
 
     }
