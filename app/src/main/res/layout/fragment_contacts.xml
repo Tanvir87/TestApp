@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/header_background">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/button_style"
+        android:fontFamily="@font/boogaloo"
+        android:gravity="center"
+        android:layout_margin="@dimen/_10sdp"
+        android:padding="@dimen/_10sdp"
+        android:text="Search For Contacts"
+        android:textSize="@dimen/_18ssp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_style"
+        android:fontFamily="@font/boogaloo"
+        android:gravity="center"
+        android:layout_margin="@dimen/_10sdp"
+        android:padding="@dimen/_10sdp"
+        android:text="Choose Your Search Option"
+        android:textSize="@dimen/_18ssp"
+        android:textStyle="bold"
+        />
+
+    <TextView
+        android:id="@+id/Option1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_style"
+        android:padding="10dp"
+        android:layout_margin="@dimen/_10sdp"
+        android:fontFamily="@font/boogaloo"
+        android:text="Select Options:"
+        android:textStyle="bold"
+        android:textSize="16dp" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/button_style"
+        android:layout_margin="@dimen/_10sdp"
+        android:weightSum="4" >
+
+        <Spinner
+            android:id="@+id/spinnerOption1"
+            android:layout_width="fill_parent"
+            android:layout_height="34dp"
+            android:layout_weight="2"
+            android:drawSelectorOnTop="true"
+
+            android:textSize="18dp" />
+
+        <Spinner
+            android:id="@+id/spinnerValue1"
+            android:layout_width="fill_parent"
+            android:layout_height="34dp"
+            android:layout_weight="2"
+            android:drawSelectorOnTop="true"
+            android:textSize="18dp" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btnSubmit"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/boogaloo"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:background="@drawable/button_style"
+        android:text="Search" />
+
+</LinearLayout>

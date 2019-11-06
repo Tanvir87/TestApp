@@ -23,6 +23,8 @@ public class HomeFragment extends Fragment {
 
         LinearLayout linearProfile = rootView.findViewById(R.id.linear_profile);
         LinearLayout linearPhotos = rootView.findViewById(R.id.linear_photos);
+        LinearLayout linearContacts = rootView.findViewById(R.id.linear_contacts);
+
 
 
         //profile
@@ -41,6 +43,15 @@ public class HomeFragment extends Fragment {
                 Navigator.fragmentForwardWithNoStack(getContext(), R.id.mainFrame, new PhotoFragment());
             }
 });
+
+        //contacts
+        linearContacts.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigator.fragmentForwardWithNoStack(getContext(), R.id.mainFrame, new ContactFragment());
+            }
+        });
+
 
         return rootView;
 
